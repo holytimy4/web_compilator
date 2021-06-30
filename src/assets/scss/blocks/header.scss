@@ -1,11 +1,91 @@
 .header {
-  height: 30px;
-  width: calc(100% - #{$sidebar-width});
+  width: 100%;
+  padding: 3rem 20vh;
 
-  background-color: #999;
+  background-color: $white;
+  color: $black;
 
   position: fixed;
   top: 0;
   right: 0;
   z-index: $z-index-header;
+
+  span {
+    color: $primary;
+  }
 }
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.header__logo {
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.header__list {
+  display: flex;
+}
+
+.header__contact {
+  font-size: 2.5rem;
+  color: $black;
+  font-weight: 500;
+
+  a {
+    color: inherit;
+
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.header__slider {
+  display: flex;
+  max-width: 15rem;
+  margin-left: 2rem;
+  padding-left: 1rem;
+}
+
+.header__slider-item {
+  max-width: 12rem;
+  display: flex;
+  align-items: center;
+}
+
+.header__phone {
+  line-height: 1;
+  font-size: 1.5rem;
+}
+
+.header__slider .slick-arrow {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  
+  z-index: 10;
+  left: -10%;
+  font-size: 0;
+  
+  border: transparent;
+  
+  background: url('../images/slider-arrow.svg') 0 0 no-repeat;
+}
+
+.header__slider .slick-arrow.slick-prev {
+  top: 60%;
+  transform: rotate(90deg)
+}
+
+.header__slider .slick-arrow.slick-next {
+  bottom: 60%;
+  transform: rotate(-90deg)
+}
+

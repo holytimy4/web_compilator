@@ -7,6 +7,7 @@ const cssbeautify = require("gulp-cssbeautify");
 const removeComments = require('gulp-strip-css-comments');
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
+const concat = require("gulp-concat");
 const cssnano = require("gulp-cssnano");
 const uglify = require("gulp-uglify");
 const plumber = require("gulp-plumber");
@@ -195,6 +196,18 @@ function jsWatch(cb) {
     cb();
 }
 
+function scripts() {
+  return src([
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.js'
+
+  ])
+  .pipe(concat('libs.min.js'))
+  .pipe(uglify())
+  .pipe(dest('dist/assets/js'))
+  .pipe(browserSync.stream())
+}
+
 function images(cb) {
     return src(path.src.images)
         .pipe(imagemin([
@@ -236,7 +249,7 @@ function watchFiles() {
     gulp.watch([path.watch.fonts], fonts);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
+const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts, scripts));
 const watch = gulp.parallel(build, watchFiles, serve);
 
 
@@ -245,6 +258,7 @@ const watch = gulp.parallel(build, watchFiles, serve);
 exports.html = html;
 exports.css = css;
 exports.js = js;
+exports.scripts = scripts
 exports.images = images;
 exports.fonts = fonts;
 exports.clean = clean;
