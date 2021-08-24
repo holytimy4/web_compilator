@@ -1,91 +1,59 @@
 .header {
+  z-index: 2;
   width: 100%;
-  padding: 3rem 20vh;
+  padding: 2.5rem 15vh;
 
-  background-color: $white;
   color: $black;
-
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: $z-index-header;
-
-  span {
-    color: $primary;
-  }
+  font-family: $heading-ff;
+  text-align: center;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.25);
 }
 
-.header__inner {
+.header-inner {
+  width: 100%;
+  max-width: 120rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
+  margin: 0 auto;
 }
 
-.header__logo {
-  font-weight: 500;
-  font-size: 3rem;
-}
+.header-logo {
+  height: 7rem;
+  width: 5rem;
 
-.header__list {
-  display: flex;
-}
-
-.header__contact {
-  font-size: 2.5rem;
-  color: $black;
-  font-weight: 500;
-
-  a {
-    color: inherit;
-
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-.header__slider {
-  display: flex;
-  max-width: 15rem;
-  margin-left: 2rem;
-  padding-left: 1rem;
-}
-
-.header__slider-item {
-  max-width: 12rem;
   display: flex;
   align-items: center;
 }
 
-.header__phone {
-  line-height: 1;
-  font-size: 1.5rem;
+.header-nav {
+  max-width: 48rem;
+  width: 100%;
+  margin-left: 10rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header__slider .slick-arrow {
-  position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
-  
-  z-index: 10;
-  left: -10%;
-  font-size: 0;
-  
-  border: transparent;
-  
-  background: url('../images/slider-arrow.svg') 0 0 no-repeat;
+.header-nav-link {
+  color: $black;
+  padding-bottom: 4px;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border 0.4s ease-in-out;
+  font-family: $secondary-ff;
+  font-size: 18px;
+
+  &:hover {
+    border-bottom: 1px solid $black;
+  }
+
 }
 
-.header__slider .slick-arrow.slick-prev {
-  top: 60%;
-  transform: rotate(90deg)
-}
-
-.header__slider .slick-arrow.slick-next {
-  bottom: 60%;
-  transform: rotate(-90deg)
+.header-btn {
+  border-radius: 32px 0;
 }
 

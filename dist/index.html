@@ -4,44 +4,114 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="assets/css/style.min.css">
-  
-  <!-- Useful meta tags -->
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="robots" content="index, follow">
   <meta name="google" content="notranslate">
   <meta name="format-detection" content="telephone=no">
   <meta name="description" content="">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
-  <title>test01 | Home</title>
-</head>
+  <title>Gribland | Главная</title></head>
 
 <body>
 
   <div class="page">
-    <!-- Header -->
-    <header class="header">header</header>
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar__header">
-        <img src="" alt="">
+    <header class="header">
+      <div class="header-inner">
+        <a href="#" class="header-logo">
+          <img src="assets/images/logo.png" alt="GribLand logo">
+        </a>
+        <nav class="header-nav nav">
+          <a href="" class="header-nav-link">Новости</a>
+          <a href="" class="header-nav-link">Сервера</a>
+          <a href="" class="header-nav-link">Соц. сети</a>
+          <a href="" class="header-nav-link">Магазин</a>
+        </nav>
+        <button class="header-btn btn">
+          <p>Авторизация</p>
+          <svg width="15px" height="15px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;"
+            xml:space="preserve" >
+            <g>
+              <path fill="#fff" d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105
+       L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795
+       l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z" />
+            </g>
+          </svg>
+        </button>
       </div>
-      <div class="sidebar__content"></div>
-      <div class="sidebar__footer"></div>
-    </aside>    
-    <!-- Main -->
-    <main class="main">
+    </header>    <main class="main">
       <div class="container">
         
-        Hello!
+        <section class="intro">
+          <h1 class="intro-title" data-aos="fade-down"><span class="intro-focus">GribLand</span> - самый грибной проект
+            майнкрафт <p class="intro-subtitle">Присоединяйся к нашей грибной тусовке</p>
+          </h1>
+          <button class="intro-btn btn btn-bubbly " data-aos="fade-up">Начать играть</button>
+        </section>
         
+        <section class="news">
+          <h2 class="news-title title">Новости</h2>
+          <div class="news-list">
+            <div class="news-secondary-wrapper news-left-wrapper" data-aos="fade-left" data-aos-offset="200">
+              <div class="news-secondary left-side">
+                <div class="news-header">
+                  <p class="news-subtitle">Обновление</p>
+                  <h2 class="news-heading">Открытие RPG</h2>
+                </div>
+                <div class="news-body">
+                  <p>Мы открыли сервер RPG с новейшей динамической и интересной сборкой на версии 1.12.2</p>
+                  <br> В процессе игры Вам будет доступно:
+                  <p> - Cистема навыков, которая позволит сделать вашего персонажа ещё сильнее! </p>
+                  </p>- Уникальные зачарования, которые позволяют сделать оружие под ваш стиль боя! </p>
+                  </p>
+                </div>
+              </div>
+              <div class="news-secondary-bg"></div>
+            </div>
+            
+            <div class="news-center">
+              <div class="news-main" data-aos="fade-down" data-aos-offset="300">
+                <div class="news-header">
+                  <p class="news-subtitle">Обновление</p>
+                  <h2 class="news-heading">Мы открылись</h2>
+                </div>
+                <div class="news-body">Друзья, спешим рассказать вам о нашем открытии. Все сервера запущены и работают. Скорее
+                  заходите на понравившейся вам сервер и начинайте свое развитие с нуля или с донатом</div>
+              </div>
+              <a href="#" class="news-all-link" >Все новости</a>
+            </div>
+        
+            <div class="news-secondary-wrapper news-right-wrapper" data-aos="fade-right" data-aos-offset="200">
+              <div class="news-secondary right-side">
+                <div class="news-header">
+                  <p class="news-subtitle">Обновление</p>
+                  <h2 class="news-heading">Открытие Technomagic</h2>
+                </div>
+                <div class="news-body">Сервер TechoMagic был переведен на версию 1.12.2.
+                  Добавленны самописные аддоны для Thaumcraft</div>
+              </div>
+              <div class="news-secondary-bg"></div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
-  </div>
+    <!-- <div class="mushrooms" id="particles-js"></div> -->
+    <div class="decor-human1" data-aos="fade-left"></div>
+    <div class="decor-human2" data-aos="fade-right"></div>  </div>
 
 
   <!-- JS -->
-  <script src="assets/js/app.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script src="assets/js/app.js" defer="defer"></script>
+
+
+  
 </body>
 
 </html>

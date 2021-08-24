@@ -212,8 +212,8 @@ function images(cb) {
     return src(path.src.images)
         .pipe(imagemin([
             imagemin.gifsicle({interlaced: true}),
-            imagemin.mozjpeg({quality: 95, progressive: true}),
-            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.mozjpeg({quality: 100, progressive: true}),
+            imagemin.optipng({optimizationLevel: 1}),
             imagemin.svgo({
                 plugins: [
                     { removeViewBox: true },

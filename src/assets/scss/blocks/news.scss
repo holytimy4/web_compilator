@@ -1,0 +1,137 @@
+.news-title {
+  margin-bottom: 6rem;
+}
+
+.news-list {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 110rem;
+  min-height: 56rem;
+  margin: 0 auto;
+}
+
+.news-secondary-wrapper {
+  align-self: flex-end;
+  position: relative;
+}
+
+.news-secondary,
+.news-main {
+  display: block;
+  color: $white;
+  font-family: $secondary-ff;
+}
+
+.news-secondary {
+  height: 40rem;
+  width: 31rem;
+  z-index: 2;
+  transition: transform 0.4s ease-in-out;
+}
+
+.news-secondary.left-side {
+  border-radius: 0 32px 0 32px;
+  text-align: left;
+  background: url('../images/news-secondary1.jpg') no-repeat;
+  background-size: cover;
+
+  &:hover {
+    transform: translateX(1rem);
+  }
+}
+
+.news-secondary.right-side {
+  border-radius: 32px 0 32px 0;
+  text-align: right;
+  background: url('../images/news-secondary2.jpg') no-repeat;
+  background-size: cover;
+
+  &:hover {
+    transform: translateX(-1rem);
+  }
+}
+
+.news-secondary-bg {
+  top: 2.4rem;
+  width: 26.3rem;
+  height: 34.3rem;
+  z-index: -2;
+  position: absolute;
+}
+
+.news-left-wrapper .news-secondary-bg {
+  left: -1rem;
+  background: url('../images/news-secondary-bg1.png')
+}
+
+.news-right-wrapper .news-secondary-bg {
+  right: -1rem;
+  background: url('../images/news-secondary-bg2.png')
+}
+
+.news-secondary .news-heading {
+  font-size: 32px;
+  line-height: 1.04;
+}
+
+.news-secondary .news-subtitle {
+  opacity: 0.7;
+}
+
+.news-secondary .news-body {
+  padding: 2rem 3.2rem;
+}
+
+.news-header {
+  padding: 2rem 3.2rem;
+  min-height: 11rem;
+}
+
+.left-side .news-header {
+  border-radius: 0 32px 0 0;
+  background: linear-gradient(114.44deg, #CB15D6 0%, #11CEEC 100%);
+}
+
+.right-side .news-header {
+  border-radius: 32px 0 0 0;
+  background: linear-gradient(114.44deg, #191275 0%, #BF0611 100%);
+}
+
+.news-center {}
+
+.news-main {
+  height: 50rem;
+  width: 38rem;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 32px;
+  background: url('../images/news-main.jpg') no-repeat;
+  background-size: cover;
+
+}
+
+.news-main .news-subtitle {
+  color: #BF0611;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+
+.news-main .news-heading {
+  font-size: 48px;
+  font-family: $heading-ff;
+  line-height: 1.04;
+}
+
+.news-all-link {
+  color: $black;
+  padding-bottom: 4px;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border 0.4s ease-in-out;
+  &:hover {
+    border-bottom: 1px solid $black;
+  }
+
+}
